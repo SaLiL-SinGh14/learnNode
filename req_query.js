@@ -33,25 +33,25 @@
 
 //another example//
 
-const express=require("express")
-const app=express()
-const PORT=3000
+// const express=require("express")
+// const app=express()
+// const PORT=3000
 
-const products = [
-    { id: 1, name: "Laptop", category: "Electronics" },
-    { id: 2, name: "Mouse", category: "Electronics" },
-    { id: 3, name: "T-Shirt", category: "Clothing" }
-];
+// const products = [
+//     { id: 1, name: "Laptop", category: "Electronics" },
+//     { id: 2, name: "Mouse", category: "Electronics" },
+//     { id: 3, name: "T-Shirt", category: "Clothing" }
+// ];
 
-app.get("/products",(req,res)=>{
+// app.get("/products",(req,res)=>{
 
-    const chosenCategory=req.query.category
+//     const chosenCategory=req.query.category
     
-    const filteredProducts=products.filter(p=>p.category===chosenCategory)
-    res.json(filteredProducts)
-})
-app.listen(PORT,()=>{
-            console.log("Server Started")
-        })
-http://localhost:3000/products?category=Electronics
-//will print the electronics products 
+//     const filteredProducts=products.filter(p=>p.category===chosenCategory)
+//     res.json(filteredProducts)
+// })
+// app.listen(PORT,()=>{
+//             console.log("Server Started")
+//         })
+// http://localhost:3000/products?category=Electronics
+// ......will print the electronics products 
