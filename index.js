@@ -37,18 +37,18 @@
 
 
 //......another example.....
-const express=require("express");
+// const express=require("express");
 
-const app=express()
+// const app=express()
 
-const PORT=3000
+// const PORT=3000
 
-app.get("/product/:id",(req,res)=>{
-    res.send(`Product id is ${req.params.id}`)
-})
-app.listen(PORT,()=>{
-    console.log("started server")
-})
+// app.get("/product/:id",(req,res)=>{
+//     res.send(`Product id is ${req.params.id}`)
+// })
+// app.listen(PORT,()=>{
+//     console.log("started server")
+// })
 
 
 //.......another exaample.......//
@@ -123,3 +123,25 @@ app.listen(PORT,()=>{
 //     console.log("server running");
 // })
 
+/// practise question 
+// const express=require("express")
+// const app=express()
+// const PORT=3000
+
+// const students = [
+//     { id: 1, name: "Rahul", course: "CSE" },
+//     { id: 2, name: "Aman", course: "IT" },
+//     { id: 3, name: "Salil", course: "AI" }
+// ];
+
+// app.get("/student/:id",(req,res)=>{
+//     const id=Number(req.params.id)
+    
+//     const n=students.find(p=>p.id===id)
+//     res.send(`Student ${n.name} studies ${n.course}`)
+// })
+// app.listen(PORT,()=>{
+//         console.log("server running");
+//     })
+
+// http://localhost:3000/student/2
