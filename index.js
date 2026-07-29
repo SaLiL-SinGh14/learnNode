@@ -145,3 +145,26 @@
 //     })
 
 // http://localhost:3000/student/2
+
+
+//practise questions//
+// const express=require("express")
+// const app=express()
+// const PORT=3000
+
+// const movies = [
+//     { id: 1, name: "Interstellar", rating: 9.2 },
+//     { id: 2, name: "Inception", rating: 9.0 },
+//     { id: 3, name: "Avengers", rating: 8.8 }
+// ];
+
+// app.get("/movie/:id",(req,res)=>{
+//     const id=Number(req.params.id)
+
+//     const m=movies.find(u=>u.id===id)
+//     res.send(`Movie ${m.name} has rating ${m.rating}`)
+// })
+// app.listen(PORT,()=>{
+//     console.log("Running server")
+// })
+// http://localhost:3000/movie/3
