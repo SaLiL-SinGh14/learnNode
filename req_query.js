@@ -46,7 +46,7 @@
 // app.get("/products",(req,res)=>{
 
 //     const chosenCategory=req.query.category
-    
+
 //     const filteredProducts=products.filter(p=>p.category===chosenCategory)
 //     res.json(filteredProducts)
 // })
@@ -73,4 +73,27 @@
 // http://localhost:3000/search?name=Salil&city=Lucknow
 
 
-// practise question
+// practise question//
+// const express = require('express')
+// const app = express()
+
+// const PORT = 3000
+// const products = [
+//     { id: 1, name: "Laptop", category: "Electronics" },
+//     { id: 2, name: "Mouse", category: "Electronics" },
+//     { id: 3, name: "T-Shirt", category: "Clothing" },
+//     { id: 4, name: "Keyboard", category: "Electronics" }
+// ];
+
+// app.get("/products", (req, res) => {
+//     const chosenCategory = req.query.category
+
+//     const filteredProducts = products.filter(i => i.category === chosenCategory)
+//     res.json(filteredProducts)
+
+// })
+
+// app.listen(PORT,()=>{
+//     console.log("Running server")
+// })
+// http://localhost:3000/products?category=Electronics
