@@ -55,3 +55,22 @@
 //         })
 // http://localhost:3000/products?category=Electronics
 // ......will print the electronics products 
+
+
+//practise question//
+// const express=require("express")
+// const app=express()
+// const PORT=3000
+
+// app.get("/search",(req,res)=>{
+//     res.send(`Hello ${req.query.name} from ${req.query.city}.`)
+
+// })
+
+// app.listen(PORT,()=>{
+//     console.log("SERVER taking lead..")
+// })
+// http://localhost:3000/search?name=Salil&city=Lucknow
+
+
+// practise question
