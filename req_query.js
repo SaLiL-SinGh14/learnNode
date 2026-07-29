@@ -97,3 +97,105 @@
 //     console.log("Running server")
 // })
 // http://localhost:3000/products?category=Electronics
+
+//practise questions///
+// const express = require('express')
+// const app = express()
+
+// const PORT = 3000
+// const mobiles = [
+//     { id: 1, brand: "Samsung", price: 30000 },
+//     { id: 2, brand: "Apple", price: 80000 },
+//     { id: 3, brand: "Samsung", price: 50000 },
+//     { id: 4, brand: "OnePlus", price: 40000 }
+// ];
+
+// app.get("/mobiles", (req, res) => {
+//     const chosenBrand = req.query.brand
+
+//     const filteredProducts = mobiles.filter(i => i.brand === chosenBrand)
+//     res.json(filteredProducts)
+
+// })
+
+// app.listen(PORT, () => {
+//     console.log("Running server")
+// })
+// http://localhost:3000/mobiles?brand=Samsung
+
+//practise questions//
+// const express=require('express')
+// const app=express()
+// const PORT=3000
+
+// const users = [
+//     {
+//         id: 1,
+//         name: "Rahul",
+//         age: 22
+//     },
+//     {
+//         id: 2,
+//         name: "Salil",
+//         age: 23
+//     }
+// ];
+
+// app.get("/search/:id",(req,res)=>{
+//     const newid=Number(req.params.id)
+//     const u=users.find(i=>i.id===newid)
+
+//     if(req.query.show==="name"){
+//        return res.send(users.name)
+//     }
+//     if(req.query.show==="age"){
+//         return res.send(users.age)
+//     }
+// })
+// app.listen(PORT,()=>{
+//     console.log("SERVER");
+// })
+const express = require("express");
+
+const app = express();
+
+const PORT = 3000;
+
+const users = [
+    {
+        id: 1,
+        name: "Rahul",
+        age: 22
+    },
+    {
+        id: 2,
+        name: "Salil",
+        age: 23
+    }
+];
+
+app.get("/user/:id", (req, res) => {
+
+    const id = Number(req.params.id);
+
+    const user = users.find(u => u.id === id);
+
+    // if (!user) {
+    //     return res.status(404).send("User not found");
+    // }
+
+    if (req.query.show === "name") {
+        return res.send(user.name);
+    }
+
+    if (req.query.show === "age") {
+        return res.send(user.age.toString());
+    }
+
+    // res.send("Invalid Query");
+
+});
+
+app.listen(PORT, () => {
+    console.log("Server Started");
+});
