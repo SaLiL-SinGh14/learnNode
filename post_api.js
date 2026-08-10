@@ -1,3 +1,19 @@
+// const express=require("express")
+// const app=express()
+// const PORT=3000
+
+// app.use(express.json())
+// app.post("/register",(req,res)=>{
+
+//      console.log(req.body)
+
+//     res.send("User Registered");
+// })
+
+// app.listen(PORT, ()=>{
+//     console.log("Server Started");
+// })
+
 const express=require("express")
 const app=express()
 const PORT=3000
@@ -5,7 +21,8 @@ const PORT=3000
 app.use(express.json())
 app.post("/register",(req,res)=>{
 
-     console.log(req.body)
+     console.log(req.body.name)
+     console.log(req.body.age)
 
     res.send("User Registered");
 })
@@ -13,3 +30,4 @@ app.post("/register",(req,res)=>{
 app.listen(PORT, ()=>{
     console.log("Server Started");
 })
+
